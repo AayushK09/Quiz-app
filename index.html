@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="quiz-body">
+    <div class="quiz-card" id="instruction-card">
+        <h2>Welcome to the Quiz</h2>
+        <p>Please read the instructions carefully:</p>
+        <ul>
+            <li>You have 5 minutes to complete the quiz.</li>
+            <li>Each question must be answered before proceeding.</li>
+            <li>We will be share quiz results on your registered email.</li>
+        </ul>
+        <label for="email">Please enter an email address for registration for the quiz: </label>
+        <input type="email" id="email" required placeholder="example@gmail.com">
+        <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <div class="quiz-card" id="quiz-card" style="display: none;">
+        <div class="progress-bar">
+            <div class="progress" style="width: 0%;"></div>
+        </div>
+        <div class="timer">Time Left: <span id="time">05:00</span></div>
+        <div class="question-section">
+            <h2 id="question-number">Question 1/10</h2>
+            <p id="question-text">How would you rate your overall experience with this course?</p>
+        </div>
+        <div class="options"></div>
+        <div class="navigation">
+            <button id="next-btn">Next</button>
+            <button id="submit-btn" style="display: none;">Submit</button>
+        </div>
+    </div>
+    <div class="quiz-card" id="result-card" style="display: none;">
+        <h2>Quiz Completed!</h2>
+        <p>Your Score: <span id="score"></span></p>
+        <button id="play-again-btn">Try Again</button>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
+
